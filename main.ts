@@ -27,7 +27,7 @@ namespace Amaths {
                 returnValue = on + returnValue
                 Number = quotient
             }
-            if (int_value > 0){
+            if (int_value > 0) {
                 return returnValue
             }
             else {
@@ -35,17 +35,15 @@ namespace Amaths {
             }
         }
     }
-    
+
     //% blockId="primeChecking" block="Is it a prime number? Number %num"
     //% blockGap=2 weight=1 blockExternalInputs=true
-    export function primeChecking (num: number):boolean{
-        for (let i = 2; i < num/2 + 1; i++){
+    export function primeChecking(num: number): boolean {
+        for (let i = 2; i < num / 2; i++){
             if (num % i == 0){
                 return false
             }
-            else {
-                return true
-            }
         }
+        return true
     }
 }
