@@ -35,4 +35,17 @@ namespace Amaths {
             }
         }
     }
+    
+    //% blockId="primeChecking" block="Is it a prime number? Number %num"
+    //% blockGap=2 weight=1 blockExternalInputs=true
+    export function primeChecking (num: number):boolean{
+        for (let i = 2; i < num/2 + 1; i++){
+            if (num % i == 0){
+                return false
+            }
+            else {
+                return true
+            }
+        }
+    }
 }
