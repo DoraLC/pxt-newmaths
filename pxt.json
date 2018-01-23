@@ -1,0 +1,14 @@
+{
+    "name": "AdvMaths",
+    "version": "0.0.1",
+    "description": "Advanced Maths blocks",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts"
+    ],
+    "public": true
+}
