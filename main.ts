@@ -1,6 +1,6 @@
 //% weight=0 color=#C12B0B icon="\uf1ec" block="Adv.Maths"
 namespace Amaths {
-    //% blockId="placeValue" block="change place value number %int_value|base %base"
+    //% blockId="placeValue" block="change place value |number %int_value|base %base"
     //% blockGap=2 weight=0 blockExternalInputs=true
     export function make_base_number(int_value: number, base: number): string {
         if (int_value == 0) {
