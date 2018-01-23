@@ -7,7 +7,7 @@ namespace Amaths {
             return "0"
         }
         else {
-            let Number = int_value
+            let Number = Math.abs(int_value)
             let quotient = 0
             let returnValue = ""
             let on = ""
@@ -27,7 +27,12 @@ namespace Amaths {
                 returnValue = on + returnValue
                 Number = quotient
             }
-            return returnValue
+            if (int_value > 0){
+                return returnValue
+            }
+            else {
+                return "-" + returnValue
+            }
         }
-    } 
+    }
 }
