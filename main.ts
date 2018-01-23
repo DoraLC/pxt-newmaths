@@ -1,4 +1,4 @@
-//% weight=0 color=#3CB371 icon="\uf0ad" block="Amaths"
+//% weight=0 color=#3CB371 icon="\uf0fe" block="Amaths"
 namespace Amaths {
     //% blockId="placeValue" block="change place value number %int_value|base %base"
     //% blockGap=2 weight=0 blockExternalInputs=true
