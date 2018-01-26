@@ -55,7 +55,12 @@ namespace Amaths {
     //% blockId="factorial" block="Factorial: %value !"
     //% blockGap=2 weight=3 blockExternalInputs=true
     export function factorial(value: number): number {
-        return value <= 1 ? value : factorial(value - 1)
+        if (value == 0){
+            return 1
+        }
+        else {
+            return factorial(value -1)*value
+        }
     }
 
     //% blockId="nCr" block="nCr | n %n| r %r"
