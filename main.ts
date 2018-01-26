@@ -61,7 +61,7 @@ namespace Amaths {
             return n * factorial(n - 1)
         }
     }
-    //% blockId="nCr" block="nCr n: %n r %r"
+    //% blockId="nCr" block="nCr n: %n| r %r"
     //% blockGap=2 weight=2 blockExternalInputs=true
     export function nCr(n: number, r: number): number {
         return factorial(n) / (factorial(r) * factorial(n - r))
