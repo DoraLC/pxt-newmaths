@@ -40,7 +40,7 @@ namespace Amaths {
     //% blockGap=2 weight=1 blockExternalInputs=true
     export function primeChecking(num: number): boolean {
         num = Math.abs(num)
-        if (num < 2){
+        if (num < 2) {
             return false
         }
         for (let i = 2; i <= num / 2; i++) {
@@ -49,5 +49,21 @@ namespace Amaths {
             }
         }
         return true
+    }
+
+    //% blockId="factorial" block="Factorial of %n"
+    //% blockGap=2 weight=2 blockExternalInputs=true
+    export function factorial(n: number): number {
+        if (n <= 1) {
+            return 1
+        }
+        else {
+            return n * factorial(n - 1)
+        }
+    }
+    //% blockId="nCr" block="nCr n: %n r %r"
+    //% blockGap=2 weight=2 blockExternalInputs=true
+    export function nCr(n: number, r: number): number {
+        return factorial(n) / (factorial(r) * factorial(n - r))
     }
 }
