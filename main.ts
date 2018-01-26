@@ -1,7 +1,10 @@
 //% weight=0 color=#C12B0B icon="\uf1ec" block="Adv.Maths"
+
+let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 namespace Amaths {
     //% blockId="placeValue" block="change place value |number %int_value|base %base"
-    //% blockGap=2 weight=0 blockExternalInputs=true
+    //% blockGap=2 weight=1 blockExternalInputs=true
     export function make_base_number(int_value: number, base: number): string {
         if (int_value == 0) {
             return "0"
@@ -11,7 +14,6 @@ namespace Amaths {
             let quotient = 0
             let returnValue = ""
             let on = ""
-            let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
             let bit = 0
             while (Number > 0) {
                 bit = Number % base
@@ -37,10 +39,10 @@ namespace Amaths {
     }
 
     //% blockId="primeChecking" block="Is it a prime number? Number %num"
-    //% blockGap=2 weight=1 blockExternalInputs=true
+    //% blockGap=2 weight=2 blockExternalInputs=true
     export function primeChecking(num: number): boolean {
         num = Math.abs(num)
-        if (num < 2){
+        if (num < 2) {
             return false
         }
         for (let i = 2; i < num / 2; i++) {
@@ -49,5 +51,28 @@ namespace Amaths {
             }
         }
         return true
+    }
+
+    //% blockId="factorial" block="Factorial: %value"
+    //% blockGap=2 weight=3 blockExternalInputs=true
+    export function factorial(value: number): number {
+        return value <= 1 ? value : factorial(value - 1)
+    }
+
+    //% blockId="nCr" block="nCr | n %n| r %r"
+    //% blockGap=2 weight=4 blockExternalInputs=true
+    export function nCr(n: number, r: number): number {
+        return factorial(n) / (factorial(r) * factorial(n - r))
+    }
+
+    //% blockId="index" block="Base: %base Index: %index"
+    //% blockGap=2 weight=4 blockExternalInputs=true
+    export function exp(base: number, index: number): number {
+        if (index == 0) {
+            return 1
+        }
+        else if (index > 0) {
+            return exp(base, index - 1) * base
+        }
     }
 }
