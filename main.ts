@@ -1,5 +1,4 @@
 //% weight=0 color=#C12B0B icon="\uf1ec" block="Adv.Maths"
-
 let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 namespace Amaths {
@@ -53,7 +52,7 @@ namespace Amaths {
         return true
     }
 
-    //% blockId="factorial" block="Factorial: %value"
+    //% blockId="factorial" block="Factorial: %value !"
     //% blockGap=2 weight=3 blockExternalInputs=true
     export function factorial(value: number): number {
         return value <= 1 ? value : factorial(value - 1)
@@ -63,16 +62,5 @@ namespace Amaths {
     //% blockGap=2 weight=4 blockExternalInputs=true
     export function nCr(n: number, r: number): number {
         return factorial(n) / (factorial(r) * factorial(n - r))
-    }
-
-    //% blockId="index" block="Base: %base Index: %index"
-    //% blockGap=2 weight=4 blockExternalInputs=true
-    export function exp(base: number, index: number): number {
-        if (index == 0) {
-            return 1
-        }
-        else if (index > 0) {
-            return exp(base, index - 1) * base
-        }
     }
 }
